@@ -1,0 +1,54 @@
+{
+  "name": "@7nohe/app-store-connect-api-client",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "debug": "pnpm run build && vite-node ./example/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "pnpm run build",
+    "release": "npx git-ensure -a && npx bumpp --commit --tag --push"
+  },
+  "keywords": [
+    "apple",
+    "app",
+    "store",
+    "connect",
+    "api",
+    "client",
+    "ios",
+    "nodejs"
+  ],
+  "author": "Daiki Urata (@7nohe)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7nohe/app-store-connect-api-client.git"
+  },
+  "homepage": "https://github.com/7nohe/app-store-connect-api-client",
+  "bugs": "https://github.com/7nohe/app-store-connect-api-client/issues",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dayjs": "^1.11.4",
+    "got": "^12.3.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.26.1",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^18.6.5",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.21.0",
+    "tsup": "^6.2.1",
+    "typescript": "^4.7.4",
+    "vite-node": "^0.21.1"
+  }
+}
