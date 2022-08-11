@@ -7,13 +7,44 @@ export type ClientOptions = {
   privateKey: Buffer | { path: string };
 }
 
-export type GetSalesReportSummaryOptions = {
-  date?: string;
+export type GetSalesReportsOptions = {
+  reportDate?: string;
+  vendorNumber: string;
   frequency?: SalesReportFrequency;
-  vendorId: string;
+}
+
+export type GetFinanceReportsOptions = {
+  reportDate?: string;
+  vendorNumber: string;
+  regionCode: string;
 }
 
 export type CSVRowData = { [name: string]: string }
+
+export type FinanceReportData = {
+  'Start Date': string;
+  'End Date': string;
+  UPC: string;
+  'ISRC/ISBN': string;
+  'Vendor Identifier': string;
+  Quantity: string;
+  'Partner Share': string;
+  'Extended Partner Share': string;
+  'Partner Share Currency': string;
+  'Sales or Return': string;
+  'Apple Identifier': string;
+  'Artist/Show/Developer/Author': string;
+  Title: string;
+  'Label/Studio/Network/Developer/Publisher': string;
+  Grid: string;
+  'Product Type Identifier': string;
+  'ISAN/Other Identifier': string;
+  'Country Of Sale': string;
+  'Pre-order Flag': string;
+  'Promo Code': string;
+  'Customer Price': string;
+  'Customer Currency': string;
+}
 
 export type SalesReportData = {
   Provider: string;
