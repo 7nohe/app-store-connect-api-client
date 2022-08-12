@@ -51,4 +51,21 @@ const client = createClient({
 })
 ```
 
+[Here](https://github.com/7nohe/app-store-connect-slack-report-example) is an example of sending a sales report to Slack.
 
+
+## API Documentation
+
+Currently, only [Sales and Finance Reports](https://developer.apple.com/documentation/appstoreconnectapi/sales_and_finance_reports) APIs are available.
+
+```ts
+declare const createClient: (clientOptions: ClientOptions) => {
+    getFinanceReports: (options: GetFinanceReportsOptions) => Promise<{
+        Total_Rows?: string;
+        Total_Amount?: string;
+        Total_Units?: string;
+        data: FinanceReportData[];
+    }>;
+    getSalesReports: (options: GetSalesReportsOptions) => Promise<SalesReportData[]>;
+};
+```
