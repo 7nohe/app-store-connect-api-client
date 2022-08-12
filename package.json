@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "",
   "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**"
+  ],
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
