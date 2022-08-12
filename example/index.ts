@@ -1,11 +1,11 @@
-import { createClinet, SalesReportFrequency } from '../dist'
+import { createClient, SalesReportFrequency } from '../dist'
 // import path from 'path';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
 // const privateKeyPath = path.resolve(__dirname, '../privateKey.p8');
 
-const client = createClinet({
+const client = createClient({
   apiKey: process.env.API_KEY!,
   issuerId: process.env.ISSUER_ID!,
   privateKey: Buffer.from(process.env.PRIVATE_KEY!, 'base64'),

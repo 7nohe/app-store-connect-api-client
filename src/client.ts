@@ -36,7 +36,7 @@ const getToken = (clientOptions: ClientOptions) => {
   return token
 }
 
-export const createClinet = (clientOptions: ClientOptions) => {
+export const createClient = (clientOptions: ClientOptions) => {
   return {
     // https://developer.apple.com/documentation/appstoreconnectapi/download_finance_reports
     getFinanceReports: async (options: GetFinanceReportsOptions): Promise<{

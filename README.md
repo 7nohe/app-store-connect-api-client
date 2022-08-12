@@ -11,12 +11,12 @@ $ npm install -D @7nohe/app-store-connect-api-client
 ## Usage
 
 ```ts
-import { createClinet, SalesReportFrequency } from '@7nohe/app-store-connect-api-client'
+import { createClient, SalesReportFrequency } from '@7nohe/app-store-connect-api-client'
 import path from 'path';
 
 const privateKeyPath = path.resolve(__dirname, '/path/to/your/p8/file');
 
-const client = createClinet({
+const client = createClient({
   apiKey: '<YOUR-API-KEY>',
   issuerId: '<YOUR-ISSUER-ID>',
   privateKey: {
@@ -40,11 +40,11 @@ run();
 For CI, a base64-encoded private key file can be set as an environment variable and passed as an option.
 
 ```ts
-import { createClinet } from '@7nohe/app-store-connect-api-client'
+import { createClient } from '@7nohe/app-store-connect-api-client'
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const client = createClinet({
+const client = createClient({
   apiKey: process.env.API_KEY!,
   issuerId: process.env.ISSUER_ID!,
   privateKey: Buffer.from(process.env.PRIVATE_KEY!, 'base64'),
