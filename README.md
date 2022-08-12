@@ -27,7 +27,7 @@ const client = createClient({
 const run = async () => {
   const result = await client.getSalesReports({
     vendorNumber: process.env.VENDOR_ID!,
-    date: '2022-08-07',
+    reportDate: '2022-08-07',
     frequency: SalesReportFrequency.Weekly
   })
   console.log(result);
