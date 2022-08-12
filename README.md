@@ -41,8 +41,6 @@ For CI, a base64-encoded private key file can be set as an environment variable 
 
 ```ts
 import { createClient } from '@7nohe/app-store-connect-api-client'
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 const client = createClient({
   apiKey: process.env.API_KEY!,
